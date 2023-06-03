@@ -1,0 +1,43 @@
+@startuml
+class Game {
+  object $deck;
+  object $player;
+  object $dealer;
+  start()
+  optionY()
+  optionN()
+  judge()
+}
+class Message {
+
+}
+class Deck {
+  array $Deck
+  InitDeck()
+  DrawCard()
+  GetDeck()
+
+}
+class Card {
+  const SUITS
+  const CARD_SCORE
+  NewDeck()
+}
+class Player {
+  array $playerHand
+  int $playerScore
+  FirstDrawCards(Deck $deck)
+  DrawCard(Deck $deck)
+  GetScore()
+
+}
+class Dealer {
+  array $playerHand
+  int $dealerScore
+  FirstDrawCards(Deck $deck)
+  DrawCard(Deck $deck)
+  GetScore()
+  GetHand()
+
+}
+@enduml

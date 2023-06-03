@@ -1,0 +1,15 @@
+@startuml
+rectangle BlackJack {
+  usecase "Game Start" as UC1
+  usecase "カードを引く" as UC2
+  usecase "ジャッジ" as UC3
+  usecase "Game Finish" as UC4
+}
+actor "Player" as Me
+actor "Dealer" as Dl
+Dl --> UC2
+UC1 --> UC2
+UC2 --> UC3
+UC3 --> UC4
+Me --> UC2
+@enduml
