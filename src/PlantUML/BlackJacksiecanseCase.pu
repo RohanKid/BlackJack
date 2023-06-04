@@ -5,7 +5,7 @@ actor       Dealer       as Dealer
 actor       Player    as Me
 collections Deck as Deck
 participant        Card        as Card
-Main -> Game : 'ブラックジャックを開始します'
+Main -> Game : ブラックジャックを開始します
 Game -> Deck: デッキを取得
 Deck -> Card: カードを取得
 Card -> Deck: カードをシャッフルして返却
@@ -18,7 +18,7 @@ Game -> Me: プレイヤーを取得
 Me -> Deck: デッキから2枚カードを取得
 Deck -> Me: デッキから2枚カードを返却
 Me -> Game: プレイヤーを返却
-Game -> Main : 'あなたの引いたカードはハートの7です。\nあなたの引いたカードはクラブの8です。\nディーラーの引いたカードはダイヤのQです。\nディーラーの引いた2枚目のカードはわかりません。\nあなたの現在の得点は15です。カードを引きますか？（Y/N）'
+Game -> Main : あなたの引いたカードはハートの7です。\nあなたの引いたカードはクラブの8です。\nディーラーの引いたカードはダイヤのQです。\nディーラーの引いた2枚目のカードはわかりません。\nあなたの現在の得点は15です。カードを引きますか？（Y/N）
 group Yの場合
 Main -> Game : Yを入力
 Game -> Me: プレイヤーを取得
@@ -26,28 +26,28 @@ Me -> Deck: デッキから1枚カードを取得
 Deck -> Me: デッキから1枚カードを返却
 Me -> Game: プレイヤーを返却
   group プレイヤーの合計が21より上
-  Game -> Main :'あなたの負けです！'
-  Main -> Main : 'ブラックジャックを終了します'
+  Game -> Main : あなたの負けです！
+  Main -> Main : ブラックジャックを終了します
   end
   group プレイヤーの合計が21以下
-  Game -> Main :'あなたの引いたカードはスペードの５です。\nあなたの現在の得点は20です。カードを引きますか？（Y/N）'
+  Game -> Main : あなたの引いたカードはスペードの５です。\nあなたの現在の得点は20です。カードを引きますか？（Y/N）
   end
 end
 group Nの場合
 Main -> Game : Nを入力
-Game -> Game :'ディーラーの引いた2枚目のカードはダイヤの2でした。'
+Game -> Game : ディーラーの引いた2枚目のカードはダイヤの2でした。
   loop ディーラーの合計が17より下
-  Game -> Game :'ディーラーの現在の得点は12です。'
+  Game -> Game : ディーラーの現在の得点は12です。
   Game -> Dealer: ディーラーを取得
   Dealer -> Deck: デッキから1枚カードを取得
   Deck -> Dealer: デッキから1枚カードを返却
   Dealer -> Game: ディーラーを返却
-  Game -> Game :'ディーラーの引いたカードはハートのKです。'
+  Game -> Game : ディーラーの引いたカードはハートのKです。
   end
   group ディーラーの合計が17以上
-  Game -> Game :'あなたの得点は20です。\nディーラーの得点は22です。'
-  Game -> Main :'あなたの勝ちです！\nor\nディーラーの勝ちです！'
-  Main -> Main : 'ブラックジャックを終了します'
+  Game -> Game : あなたの得点は20です。\nディーラーの得点は22です。
+  Game -> Main : あなたの勝ちです！\nor\nディーラーの勝ちです！
+  Main -> Main : ブラックジャックを終了します
   end
 end
 @enduml

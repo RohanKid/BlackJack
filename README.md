@@ -39,3 +39,6 @@ docker-compose down
 
 ### ユーザーケース図
 <img src="https://github.com/RohanKid/BlackJack/blob/main/out/src/PlantUML/BlackJackUseCase/Blackjack.svg" width="800">
+
+### シーケンス図
+<img src="https://github.com/RohanKid/BlackJack/blob/main/out/src/PlantUML/BlackJackUseCase/Blackjack.svg" width="800">
