@@ -53,6 +53,19 @@ VSCode の Remote-Containers: Open Folder in Container からコンテナを開�
 docker-compose down
 ```
 
+## 追加する予定の機能
+ ・チップ
+   最初にプレイヤー全員に均等にチップを配る(チップ枚数は選択可)
+   毎ターン賭けるチップを選択
+ ・ターン制
+ 　全プレイヤーのチップがなくなるかターン数がなくなるまでゲームを続ける
+　 ターンを選択できる
+ ・ルール追加
+   ダブリングダウン
+   インシュアランス
+   サレンダー
+   ・・・
+
 ### クラス図
 <img src="https://github.com/RohanKid/BlackJack/blob/main/out/src/PlantUML/BlackJackClassCase/Blackjack.svg" width="800">
 
