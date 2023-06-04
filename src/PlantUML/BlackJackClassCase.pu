@@ -1,8 +1,8 @@
-@startuml
+@startuml Blackjack
 class Game {
-  object $deck;
-  object $player;
-  object $dealer;
+  object $deck
+  object $player
+  object $dealer
   start()
   optionY()
   optionN()

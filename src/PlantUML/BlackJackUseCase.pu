@@ -1,8 +1,8 @@
-@startuml
+@startuml Blackjack
 rectangle BlackJack {
   usecase "Game Start" as UC1
-  usecase "カードを引く" as UC2
-  usecase "ジャッジ" as UC3
+  usecase "Draw Card" as UC2
+  usecase "Judge" as UC3
   usecase "Game Finish" as UC4
 }
 actor "Player" as Me

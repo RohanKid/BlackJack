@@ -34,16 +34,5 @@ VSCode の Remote-Containers: Open Folder in Container からコンテナを開�
 docker-compose down
 ```
 
-### デバッグ (Xdebug)
-
-デバッグしたい時は下記の順に実施する。
-
-1. コードにブレークポイントを設定する
-2. デバッグビューを開く
-3. 「Listen for Xdebug」を選択してデバッグを開始する
-4. コードを実行する
-
-ブレークポイントで止まらない場合、 `.vscode/launch.json` の port が 9003 であることを確認する。
-
 ### クラス図
 <img src="https://github.com/RohanKid/BlackJack/blob/main/PlantUMLsvg/src/PlantUML/BlackJackClassCase/BlackJackClassCase.svg" width="800">

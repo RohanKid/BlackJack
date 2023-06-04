@@ -1,4 +1,4 @@
-@startuml
+@startuml Blackjack
 participant        Main        as Main
 participant        Game        as Game
 actor       Dealer       as Dealer

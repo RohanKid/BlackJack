@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="388px" preserveAspectRatio="none" style="width:298px;height:388px;background:#FFFFFF;" version="1.1" viewBox="0 0 298 388" width="298px" zoomAndPan="magnify"><defs/><g><!--MD5=[8fd28995cee2fc2302c4c801997d92c6]
+cluster BlackJack--><g id="cluster_BlackJack"><rect fill="none" height="375.5" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1.0;" width="166" x="63.5" y="7"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="72" x="110.5" y="21.9951">BlackJack</text></g><g id="elem_UC1"><ellipse cx="146.3963" cy="57.2793" fill="#F1F1F1" rx="64.3963" ry="15.2793" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="77" x="104.8963" y="61.0268">Game Start</text></g><g id="elem_UC2"><ellipse cx="146.4096" cy="170.3819" fill="#F1F1F1" rx="62.4096" ry="14.8819" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="71" x="107.9096" y="174.1295">Draw Card</text></g><g id="elem_UC3"><ellipse cx="146.6869" cy="260.0634" fill="#F1F1F1" rx="39.1869" ry="14.5634" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="39" x="125.0666" y="263.5876">Judge</text></g><g id="elem_UC4"><ellipse cx="146.6678" cy="350.3336" fill="#F1F1F1" rx="67.1678" ry="15.8336" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="85" x="101.1678" y="354.0811">Game Finish</text></g><!--MD5=[f78695049e0a27d4224b05117a5117c4]
+entity Me--><g id="elem_Me"><ellipse cx="26.5" cy="28" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M26.5,36 L26.5,63 M13.5,44 L39.5,44 M26.5,63 L13.5,78 M26.5,63 L39.5,78 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="41" x="6" y="92.4951">Player</text></g><!--MD5=[1d295747f9db26d69e8c64c59b57bd68]
+entity Dl--><g id="elem_Dl"><ellipse cx="268.5" cy="28" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M268.5,36 L268.5,63 M255.5,44 L281.5,44 M268.5,63 L255.5,78 M268.5,63 L281.5,78 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="45" x="246" y="92.4951">Dealer</text></g><!--MD5=[df2be38d7412eedd9e0f8590a0729dcb]
+link Dl to UC2--><g id="link_Dl_UC2"><path d="M245.93,80.14 C240.57,85.21 234.86,90.57 229.5,95.5 C208.15,115.14 183.27,137.22 166.35,152.11 " fill="none" id="Dl-to-UC2" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="162.23,155.73,171.6261,152.7783,165.9804,152.4233,166.3354,146.7776,162.23,155.73" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[1aa3f81a3bd80cff712043234baebedb]
+link UC1 to UC2--><g id="link_UC1_UC2"><path d="M146.5,73.01 C146.5,92.81 146.5,128.35 146.5,150.33 " fill="none" id="UC1-to-UC2" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="146.5,155.34,150.5,146.34,146.5,150.34,142.5,146.34,146.5,155.34" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[594891eb4838d876d29f7ff5a36f2080]
+link UC2 to UC3--><g id="link_UC2_UC3"><path d="M146.5,185.56 C146.5,200.32 146.5,223.61 146.5,239.99 " fill="none" id="UC2-to-UC3" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="146.5,245.26,150.5257,236.2715,146.5143,240.26,142.5257,236.2486,146.5,245.26" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[c2c2d51be8a732dddcb94b0c58646b8f]
+link UC3 to UC4--><g id="link_UC3_UC4"><path d="M146.5,274.83 C146.5,289.33 146.5,312.28 146.5,328.91 " fill="none" id="UC3-to-UC4" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="146.5,334.29,150.5,325.29,146.5,329.29,142.5,325.29,146.5,334.29" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[d18620d8c38caf012eac7a7810dcc6ca]
+link Me to UC2--><g id="link_Me_UC2"><path d="M47.04,79.46 C52.34,84.75 58.08,90.39 63.5,95.5 C84.59,115.42 109.52,137.45 126.51,152.25 " fill="none" id="Me-to-UC2" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="130.66,155.85,126.5016,146.9221,126.89,152.5656,121.2465,152.954,130.66,155.85" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[3d67576e2774f79134926c4c4cb3631b]
+@startuml Blackjack
+rectangle BlackJack {
+  usecase "Game Start" as UC1
+  usecase "Draw Card" as UC2
+  usecase "Judge" as UC3
+  usecase "Game Finish" as UC4
+}
+actor "Player" as Me
+actor "Dealer" as Dl
+Dl - -> UC2
+UC1 - -> UC2
+UC2 - -> UC3
+UC3 - -> UC4
+Me - -> UC2
+@enduml
+
+PlantUML version 1.2022.7(Tue Aug 23 02:01:30 JST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>
