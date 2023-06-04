@@ -1,8 +1,11 @@
 @startuml Blackjack
 class Game {
   object $deck
-  object $player
+  object $ManualPlayer
   object $dealer
+  arrayobject $AutoPlayer
+  int $PlayersNumber
+  __construct($PlayersNumber)
   start()
   optionY()
   optionN()
@@ -24,20 +27,27 @@ class Card {
   NewDeck()
 }
 class Player {
+  string $name
   array $playerHand
   int $playerScore
   FirstDrawCards(Deck $deck)
   DrawCard(Deck $deck)
   GetScore()
+  GetHand()
+
+}
+class ManualPlayer {
+  string $name
+  __construct($name)
+  GetName()
+
+}
+class AutoPlayer {
+  string array $AutoPlayerName
+  __construct($name)
+  GetName()
 
 }
 class Dealer {
-  array $playerHand
-  int $dealerScore
-  FirstDrawCards(Deck $deck)
-  DrawCard(Deck $deck)
-  GetScore()
-  GetHand()
-
 }
 @enduml

@@ -2,10 +2,12 @@
 participant        Main        as Main
 participant        Game        as Game
 actor       Dealer       as Dealer
-actor       Player    as Me
+actor       ManualPlayer    as Me
+actor       AutoPlayer1    as Pl1
+actor       AutoPlayer2   as Pl2
 collections Deck as Deck
 participant        Card        as Card
-Main -> Game : ブラックジャックを開始します
+Main -> Game : ブラックジャックを開始します プレイ人数を入力してください(1~3)\n人数が3人の場合
 Game -> Deck: デッキを取得
 Deck -> Card: カードを取得
 Card -> Deck: カードをシャッフルして返却
@@ -14,20 +16,27 @@ Game -> Dealer: ディーラーを取得
 Dealer -> Deck: デッキから2枚カードを取得
 Deck -> Dealer: デッキから2枚カードを返却
 Dealer -> Game: ディーラーを返却
-Game -> Me: プレイヤーを取得
+Game -> Me: マニュアルプレイヤーを取得
 Me -> Deck: デッキから2枚カードを取得
 Deck -> Me: デッキから2枚カードを返却
-Me -> Game: プレイヤーを返却
+Me -> Game: マニュアルプレイヤーを返却
+Game -> Pl1 : オートプレイヤー1を取得
+Pl1 -> Deck: デッキから2枚カードを取得
+Deck -> Pl1: デッキから2枚カードを返却
+Pl1 -> Game: オートプレイヤー1を返却
+Game -> Pl2 : オートプレイヤー2を取得
+Pl2 -> Deck: デッキから2枚カードを取得
+Deck -> Pl2: デッキから2枚カードを返却
+Pl2 -> Game: オートプレイヤー2を返却
 Game -> Main : あなたの引いたカードはハートの7です。\nあなたの引いたカードはクラブの8です。\nディーラーの引いたカードはダイヤのQです。\nディーラーの引いた2枚目のカードはわかりません。\nあなたの現在の得点は15です。カードを引きますか？（Y/N）
 group Yの場合
 Main -> Game : Yを入力
-Game -> Me: プレイヤーを取得
+Game -> Me: マニュアルプレイヤーを取得
 Me -> Deck: デッキから1枚カードを取得
 Deck -> Me: デッキから1枚カードを返却
-Me -> Game: プレイヤーを返却
+Me -> Game: マニュアルプレイヤーを返却
   group プレイヤーの合計が21より上
   Game -> Main : あなたの負けです！
-  Main -> Main : ブラックジャックを終了します
   end
   group プレイヤーの合計が21以下
   Game -> Main : あなたの引いたカードはスペードの５です。\nあなたの現在の得点は20です。カードを引きますか？（Y/N）
@@ -35,6 +44,24 @@ Me -> Game: プレイヤーを返却
 end
 group Nの場合
 Main -> Game : Nを入力
+  group オートプレイヤーの挙動
+    loop オートプレイヤーの合計が17より下
+    Game -> Pl1 : オートプレイヤー1を取得
+    Pl1 -> Deck: デッキから1枚カードを取得
+    Deck -> Pl1: デッキから1枚カードを返却
+    Pl1 -> Game: オートプレイヤー1を返却
+    Game -> Pl2 : オートプレイヤー2を取得
+    Pl2 -> Deck: デッキから1枚カードを取得
+    Deck -> Pl2: デッキから1枚カードを返却
+    Pl2 -> Game: オートプレイヤー2を返却
+    end
+    group オートプレイヤーの合計が17以上
+    Game -> Game : オートプレイヤーの合計を取得
+    end
+    group オートプレイヤーの合計が21より上
+    Game -> Game : オートプレイヤーの負けです
+    end
+  end
 Game -> Game : ディーラーの引いた2枚目のカードはダイヤの2でした。
   loop ディーラーの合計が17より下
   Game -> Game : ディーラーの現在の得点は12です。
@@ -45,8 +72,8 @@ Game -> Game : ディーラーの引いた2枚目のカードはダイヤの2で
   Game -> Game : ディーラーの引いたカードはハートのKです。
   end
   group ディーラーの合計が17以上
-  Game -> Game : あなたの得点は20です。\nディーラーの得点は22です。
-  Game -> Main : あなたの勝ちです！\nor\nディーラーの勝ちです！
+  Game -> Game : あなたの得点は20です。\nプレイヤー1の得点は20です。\nプレイヤー2の得点は20です。\nディーラーの得点は22です。
+  Game -> Main : あなたの勝ちです！\nプレイヤー1の勝ちです！\nプレイヤー2の勝ちです！
   Main -> Main : ブラックジャックを終了します
   end
 end

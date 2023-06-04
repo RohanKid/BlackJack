@@ -11,14 +11,14 @@ class GameTest extends TestCase
 {
   public function testStart()
   {
-    $game = new Game();
+    $game = new Game(3);
 
     $this->assertSame(null, $game->start());
   }
 
   public function testOptionY()
   {
-    $game = new Game();
+    $game = new Game(3);
     $game->start();
 
     $this->assertSame('integer', gettype($game->optionY()));
@@ -26,7 +26,7 @@ class GameTest extends TestCase
 
   public function testOptionN()
   {
-    $game = new Game();
+    $game = new Game(3);
     $game->start();
 
     $this->assertSame(null, $game->optionN());

@@ -5,11 +5,15 @@ rectangle BlackJack {
   usecase "Judge" as UC3
   usecase "Game Finish" as UC4
 }
-actor "Player" as Me
+actor "Manual Player" as Me
+actor "Auto Player1" as Pl1
+actor "Auto Player2" as Pl2
 actor "Dealer" as Dl
 Dl --> UC2
 UC1 --> UC2
 UC2 --> UC3
 UC3 --> UC4
 Me --> UC2
+Pl1 --> UC2
+Pl2 --> UC2
 @enduml

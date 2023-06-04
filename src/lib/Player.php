@@ -6,8 +6,8 @@ require_once('Deck.php');
 
 class Player
 {
-  private array $playerHand;
-  private int $playerScore;
+  protected array $playerHand;
+  protected int $playerScore;
   public function FirstDrawCards(Deck $deck)
   {
     $this->playerHand[] = $deck->DrawCard();
