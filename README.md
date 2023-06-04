@@ -35,7 +35,7 @@ docker-compose down
 ```
 
 ### クラス図
-<img src="https://github.com/RohanKid/BlackJack/blob/main/PlantUMLsvg/src/PlantUML/BlackJackClassCase/BlackJackClassCase.svg" width="800">
+<img src="https://github.com/RohanKid/BlackJack/blob/main/out/src/PlantUML/BlackJackClassCase/Blackjack.svg" width="800">
 
 ### ユーザーケース図
 <img src="https://github.com/RohanKid/BlackJack/blob/main/out/src/PlantUML/BlackJackUseCase/Blackjack.svg" width="800">
