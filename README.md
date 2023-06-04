@@ -46,6 +46,4 @@ docker-compose down
 ブレークポイントで止まらない場合、 `.vscode/launch.json` の port が 9003 であることを確認する。
 
 ### クラス図
-<div>
-https://www.plantuml.com/plantuml/svg/hL2nJWCn3Dtx5Hawb6zWARg3qe62UZ0m8PDOrPLShh9pgYh4lnCxN9IDfTjxp_9xprvp18hJu1VM0xFPm83cUs7C-7b46ytIeVswhVZ9mmMfLXo2pufwhMvaTehz6Duhl5DydDm14_hvYtj2PZX8Of7Q5AWDW0WkPYayiMteeq2rQGdE3P1Jii5vK3nafXvs31nDzxPzxGfhxlRjHzSyx--JjCDpNYwxBtfWtI2V_0Z19QqFvGcT7GcJzD0JnxaIhyGl_wskMikvjAxNhLi4_r-oFFjgoKh4FRTOOt3Ju7y1
-</div>
+<img src="https://user-images.githubusercontent.com/57904570/190953728-8f2595f8-698c-4ef5-96fa-42be1a4579f9.png" width="800">
