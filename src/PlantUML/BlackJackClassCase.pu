@@ -43,8 +43,9 @@ class ManualPlayer {
 
 }
 class AutoPlayer {
-  string array $AutoPlayerName
-  __construct($name)
+  array $AutoPlayerName
+  string $name
+  __construct()
   GetName()
 
 }
