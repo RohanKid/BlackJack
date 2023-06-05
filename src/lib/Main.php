@@ -8,10 +8,14 @@ $PlayersNumber = (int)trim(fgets(STDIN));
 $game = new Game($PlayersNumber);
 $game ->start();
 $score = 0;
-while ($score <= 21) {
+while (true) {
   $option = trim(fgets(STDIN));
   if ($option === "Y") {
     $score = $game->optionY();
+    if($score > 21) {
+      $game->optionN();
+      break;
+    }
   }
   if ($option === "N") {
     $game->optionN();
