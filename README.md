@@ -33,7 +33,7 @@ docker-compose build
 docker-compose up -d
 
 # Docker コンテナ内でコマンドを実行する
-docker compose exec app php Main.php
+docker compose exec app php lib/Main.php
 
 # Docker コンテナの停止・削除
 docker-compose down
