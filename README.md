@@ -23,7 +23,7 @@
     
 　![コンソール画面](https://github.com/RohanKid/BlackJack/assets/127714058/3297c6d6-66a8-4070-acd9-dd8365b34102)
 
-## 環境構築
+## 環境構築と実行方法
 
 ```bash
 # Docker イメージのビルド
@@ -33,7 +33,7 @@ docker-compose build
 docker-compose up -d
 
 # Docker コンテナ内でコマンドを実行する
-docker-compose exec app php -v
+docker compose exec app php Main.php
 
 # Docker コンテナの停止・削除
 docker-compose down
